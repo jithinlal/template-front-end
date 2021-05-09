@@ -10,14 +10,17 @@ module.exports = {
 	},
 	// webpack 5 comes with devServer which loads in development mode
 	devServer: {
-		port: 3000,
+		port: 4000,
 		watchContentBase: true,
+	},
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 	},
 	// Rules of how webpack will take our files, complie & bundle them for the browser
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: /nodeModules/,
 				use: {
 					loader: 'babel-loader',
